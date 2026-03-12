@@ -1,22 +1,22 @@
-# Library-Management-System - C Tabanlı Kütüphane Yönetim Sistemi
+# C-Based Library Management System
 
-Bu proje, bir kütüphanenin temel operasyonel ihtiyaçlarını karşılamak amacıyla C dilinde geliştirilmiş bir yönetim sistemidir. Birinci sınıfın ilk döneminde, C dilinin temel kavramlarını ve dosya sistemlerini öğrenmek amacıyla geliştirilmiştir.
+This project is a comprehensive management system developed in C to meet the basic operational needs of a library. It was developed during the first semester of the first year to master basic C programming concepts and file systems.
 
-## 🚀 Özellikler
-- **Kitap Yönetimi:** Kitap ekleme, silme, ID ile arama ve tüm kitapları listeleme.
-- **Üye Yönetimi:** 11 haneli TC kimlik kontrolü ile üye kaydı ve takibi.
-- **Ödünç İşlemleri:** Kitapların ödünç verilmesi, iade alınması ve durumlarının (Mevcut/Ödünçte) otomatik güncellenmesi.
-- **Raporlama:** Mevcut ve ödünçteki kitapların ayrı ayrı listelenmesi.
-- **Veri Kalıcılığı:** Tüm veriler `txt` dosyalarında saklanır, uygulama kapansa bile veriler korunur.
+## 🚀 Features
+- **Book Management:** Functions to add, delete, search by ID, and list all books.
+- **Member Management:** Registration and tracking of members with 11-digit TC identification number validation.
+- **Lending Operations:** Book borrowing and return processes with automatic status (Available/On Loan) updates.
+- **Reporting:** Categorized lists for available and currently borrowed books.
+- **Data Persistence:** All records are stored in `txt` files, ensuring data is preserved even after application exit.
 
-## 🛠 Teknik Detaylar
-- **Dinamik Bellek Yönetimi:** `malloc` ve `free` kullanılarak veriler için çalışma anında bellek tahsisi yapılmıştır.
-- **Dosya İşlemleri:** `fopen`, `fprintf`, `fscanf` ve geçici dosya (`temp file`) mantığı ile veri güncelleme işlemleri yönetilmiştir.
-- **Veri Yapıları:** `struct` yapısı kullanılarak kitap, üye ve ödünç alma süreçleri modellenmiştir.
-- **Hata Yönetimi:** TC Kimlik numarası ve Tarih (YYYY-MM-DD) formatları için temel doğrulama mekanizmaları içerir.
+## 🛠 Technical Highlights
+- **Dynamic Memory Management:** Runtime memory allocation for data using `malloc` and `free`.
+- **File I/O Operations:** Implemented using `fopen`, `fprintf`, and `fscanf`, utilizing temporary file logic for secure data updates.
+- **Data Structures:** Modeled complex library entities and processes using `struct` types.
+- **Input Validation:** Integrated checks for TC identification number length and specific date formats (YYYY-MM-DD).
 
-## 💻 Kurulum
-1. C derleyicisine (GCC vb.) sahip olduğunuzdan emin olun.
-2. Kodları indirin ve derleyin:
+## 💻 Installation
+1. Ensure a C compiler (e.g., GCC) is installed.
+2. Compile the source code:
    ```bash
-   gcc main.c -o kutuphane_sistemi
+   gcc main.c -o library_system
